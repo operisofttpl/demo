@@ -20,6 +20,7 @@ resource "aws_instance" "demo_ec2" {
   tags = {
     Name = "demo"
   }
+}
 
 output "pem_file_for_ssh" {
   value = tls_private_key.master-key-gen.private_key_pem
